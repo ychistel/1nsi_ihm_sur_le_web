@@ -1,0 +1,46 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 3</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+		<script type="text/javascript">
+			window.addEventListener("load", function(event) {
+				let rayon = prompt('Quel est le rayon du disque ?');
+				console.log('Le rayon du disque que vous avez saisi est : '+rayon);
+				let aire = Math.PI * rayon * rayon;
+				console.log("L'aire d'un disque de rayon "+rayon+" est "+aire);			
+			});
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>JAVASCRIPT est un langage de programmation</h1>
+            <p>Comme tout langage de programmation, JAVASCRIPT permet d'utiliser des <b>variables</b> et des instructions 
+			d'affectation, de condition et d'itération.</p>
+            <p>L'affectation se fait avec le signe "=" et le mot clé <b>let</b> : let a = 3</p>
+            <p>Les variables sont typées : number (nombres), string (caractères), array (tableaux), object (objets), etc.</p>
+            <p>Il existe un objet <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math">math</a> 
+			en JAVASCRIPT qui permet de réaliser des calculs mathématiques.</p>
+            <p>Le script de cette page calcule l'aire d'un disque qui est affiché dans la console (F12)!</p>
+            <dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>let rayon = prompt('Quel est le rayon du disque ?');</dd>
+                <dd>console.log('Le rayon du disque que vous avez saisi est : '+rayon);</dd>
+                <dd>let aire = Math.PI * rayon * rayon;</dd>
+                <dd>console.log("L'aire d'un disque de rayon "+rayon+" est "+aire);</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+            <h4>Commentaires:</h4>
+            <ul>
+                <li>Une fenêtre de saisie permet de donner le rayon du disque avec la fonction <b>prompt</b>.</li>
+                <li>Le rayon est enregistré dans une variable <b>rayon</b> avec la commande <b>let</b>.</li>
+                <li>Une variable <b>aire</b> enregistre la valeur calculée de l'aire du disque.</li>
+                <li>Un affichage en console est réalisé.</li>
+                <li>La concaténation des messages et des variables se fait avec le signe <b>+</b>.</li>
+            </ul>
+        </article>
+        <div class="pages"><a href="script02.html">Précédent</a> - <a href="script04.html">Suivant</a></div>
+		
+    </body>
+</html>

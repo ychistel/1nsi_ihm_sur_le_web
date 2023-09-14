@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 11</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">			
+            function carré(){
+                let nombre = prompt("Saisir le nombre dont vous voulez calculer le carré:");
+				if (nombre.match(/^[0-9]+$/)){
+					let monCarré = nombre * nombre ;
+					document.getElementById('nombre').innerHTML = nombre;
+					document.getElementById('carré').innerHTML = monCarré;
+				}
+            }
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>Modifier le contenu d'un document HTML avec JAVASCRIPT</h1>
+            <p>Les programmes réalisés jusqu'à présent sont peu utiles pour le document web qui les appelle. Le véritable intérêt de JAVASCRIPT est de pouvoir interagir avec le document WEB pour le modifier.</p>
+            <p>On peut modifier directement le document WEB au moment de son chargement.<br />
+            Pour modifier un document WEB, il faut :</p>
+            <ol>
+                <li>Créer une fonction qui réalisera la tâche demandée</li>
+                <li>Identifier les éléments HTML qui seront modifiés par la fonction</li>
+                <li>Appeler la fonction dans un script situé en bas de page</li>
+            </ol>          
+            <p>Le script de cette page utilise une fonction pour calculer le carré d'un nombre saisi par le lecteur de la page. Maintenant, 3 parties du document WEB sont utilisés !</p>
+            <div id="exemple" class="centre">
+            <p>Le carré du nombre <span id="nombre">1</span> est égal au nombre <span id="carré">1</span>.
+            </div>
+            <h5>Le script JAVASCRIPT dans le <b>&lt;head&gt;</b> du document</h6>
+            <dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>function carré(){
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let nombre = prompt("Saisir le nombre dont vous voulez calculer le carré:");</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let monCarré = nombre * nombre ;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('nombre').innerHTML = nombre;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('carré').innerHTML = monCarré;</dd>
+                <dd>}</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+            <h5>Le code HTML dans le <b>&lt;body&gt;</b> du document qui recevra les valeurs à afficher</h6>  
+            <dl>
+                <dt>&lt;/body&gt;</dt>
+                <dd>...</dd>
+                <dd>&lt;p&gt;Le carré du nombre &lt;span id="nombre"&gt;1&lt;/span&gt; est égal au nombre &lt;span id="carré"&gt;1&lt;/span&gt;.&lt;/p&gt;</dd>
+            <dd>...</dd>  
+            <dt>&lt;/body&gt;</dt> 
+            </dl>
+            <h5>Le script JAVASCRIPT à la fin du document WEB pour lancer l'exécution du script appelé.</h6> 
+            <dl>
+                <dt>&lt;/body&gt;</dt>
+                <dd>...</dd>
+                <dd>&lt;script&gt; carré(); &lt;/script&gt;</dd>
+                <dt>&lt;/body&gt;</dt>
+            </dl>
+            
+            <h4>Commentaires:</h4>
+            <ul>
+                <li>On crée une fonction <b>carré()</b> sans paramètre qui sera appelée à la fin du chargement de la page web.</li>
+                <li>On utilise encore une fenêtre de saisie avec la fonction <b>prompt</b>.</li>
+                <li>La valeur est enregistrée dans une variable <b>nombre</b> avec la commande <b>let</b>.</li>
+                <li>On utilise la fonction <b>getElementById('id')</b> pour repérer la partie du document web à modifier.</li>
+                <li>On enchaine avec la fonction <b>innerHTML</b> pour modifier la valeur à afficher.</li>
+                <li>Le document WEB est chargé, la fonction carrée est appelée et les deux valeurs sont modifiées aussitôt !</li>
+            </ul>
+        </article>
+        <div class="pages"><a href="script10.html">Précédent</a> - <a href="script12.html">Suivant</a></div>
+        <script>carré();</script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 5</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+		window.addEventListener("load", function(event) {
+				let nombre = prompt('Donner un nombre compris entre 1 et 10 ?');
+            if (nombre > 1 && nombre < 10) {
+                console.log("Vous avez saisi "+nombre+". Vous avez respecté la consigne !");
+            }
+            else {
+                console.log("Vous avez mal lu la consigne ou vous ignorez ce qu'est un nombre compris entre 1 et 10 !");
+            }		
+			});
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>Les structures conditionnelles en JAVASCRIPT</h1>
+            <p>Une <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/if...else">
+			structure conditionnelle</a> en JAVASCRIPT proche de celle utilisée en langage PYTHON est de la forme: <br />
+             <b>if</b> (<i>condition</i>) { <i>instructions;</i> } <b>else</b> { <i>instructions;</i> } avec un else 
+			 facultatif.</p>
+            <p>Le script de cette page soumet une question au lecteur. Un test est effectué pour afficher une réponse 
+			différente selon les cas.</p>
+            <dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>let nombre = prompt('Donner un nombre compris entre 1 et 10 ?');</dd>
+                <dd>if (nombre > 1 && nombre < 10) {</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Vous avez saisi "+nombre+". Vous avez respecté la consigne !");</dd>
+            <dd>}</dd>
+                <dd>else {</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Vous avez mal lu la consigne ou vous ignorez ce qu'est un 
+				nombre compris entre 1 et 10 !");</dd>
+            <dd>}</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+            <h4>Commentaires:</h4>
+            <ul>
+                <li>Une fenêtre de saisie permet de donner le nombre avec la fonction <b>prompt</b>.</li>
+                <li>Le nombre est enregistré dans une variable <b>nombre</b> avec la commande <b>let</b>.</li>
+                <li>La condition est double avec un ET symbolisé par <b>&&</b> ce qui signifie que l'instruction est 
+				réalisée si le nombre est à la fois plus grand que 1 et plus petit que 10.</li>
+                <li>Le <b>else</b> donne une alternative si la condition n'est pas vérifiée.</li>
+            </ul>
+        </article>
+        <div class="pages"><a href="script04.html">Précédent</a> - <a href="script06.html">Suivant</a></div>
+    </body>
+</html>

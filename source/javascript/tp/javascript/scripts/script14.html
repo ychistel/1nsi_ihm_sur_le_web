@@ -1,0 +1,52 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 14</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+            function modifieRègleCSS(){
+                // changer les règles CSS
+				
+				
+				// fin du script à modifier
+            }
+			window.addEventListener("load", modifieRègleCSS);
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1 class="beautitre">Modifier des règles CSS avec JAVASCRIPT</h1>
+        <p id="intro">Le script de cette page doit modifier les règles CSS de certains éléments HTML. 
+		Il faut au préalable avoir une connaissance de la structure HTML du document en repérant les id, class 
+		et sélecteurs utilisés.</p>
+		<p id="syntaxe">
+		Lorsque le sélecteur est atteint, on enchaine avec la méthode <b>style</b> en lui attribuant les 
+		nouvelles valeurs CSS:</p>
+		<h5>Par exemple:</h5>
+		<ul>
+			<li>Changer la couleur : document.getElementById('id').style.color = "couleur";</li>
+			<li>Changer l'alignement : document.getElementById('id').style.textAlign = "alignement";</li>
+			<li>Ajouter une bordure : document.getElementById('id').style.border = "valeurs";</li>
+		</ul>
+		<h5>Remarque:</h5>
+		<p id="remark">Les propriétés CSS sont parfois écrites avec un trait d'union. En javascript, les propriétés 
+		ne sont pas écrites avec un trait d'union. Celui-ci est remplacé par la majuscule du mot situé après 
+		le tiret. Par exemple, la propriété CSS <b>padding-left</b> sera écrite <b>paddingLeft</b> 
+		en JAVASCRIPT.</p>
+        <h4 id="job">Votre travail:</h4>
+            <ol id="liste_num">
+                <li>Vous devez éditer ce fichier script14.html et compléter le script JAVASCRIPT.</li>
+                <li>Centrer le titre en rouge;</li>
+                <li>Le paragraphe d'introduction sera mis en couleur bleue.</li>
+				<li>Le second paragraphe sera sur un fond gris clair.</li>
+				<li>Les puces de la liste d'exemples seront remplacées par des carrés.</li>
+				<li>Le contenu de la remarque sera en italique.</li>
+                <li>Le titre "Votre travail" sera encadré.</li>
+                <li>La liste des tâches à réaliser aura un espacement de lettres égal à 5px (difficile).</li>
+            </ol>
+        <p>Si votre script est correct, en actualisant cette page, vous devez voir les modifications du document.</p>
+        </article>
+        <div class="pages"><a href="script13.html">Précédent</a> - <a href="script15.html">Suivant</a></div>
+    </body>
+</html>

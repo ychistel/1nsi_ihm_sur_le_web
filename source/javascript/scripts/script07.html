@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 7</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+			window.addEventListener("load", function (event){
+				let msg="";
+				let valeur = prompt("Combien de scripts avez-vous lu jusqu'ici ?");
+				for (let i=1; i<=valeur ; i++){
+					msg = msg+'vous avez lu le script '+i+'\n';
+				}
+				window.console.log(msg);
+			});
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>La strucutre itérative en JAVASCRIPT</h1>
+            <p>Une <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration">structure itérative</a> en JAVASCRIPT est une structure de boucle. Parmi les différentes possibilités, on a la boucle <b>for</b>:<br />
+                <b>for</b> (let <i>pas</i>=0 ; <i>pas</i>&lt;10 ; <i>pas</i>++) { <i>instructions;</i> } où <i>pas</i> est une variable compteur de boucle.</p>
+            <p>Le script de cette page affiche les différents scripts que vous avez lu pour arriver jusqu'ici.</p>
+            <dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>let msg="";</dd>
+                <dd>let valeur = prompt("Combien de scripts avez-vous lu jusqu'ici ?");</dd>
+                <dd>for (let i=1; i<=valeur ; i++){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;msg = msg+'vous avez lu le script '+i+'\n';</dd>
+                <dd>}</dd>
+                <dd>window.console.log(msg);</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+            <h4>Commentaires:</h4>
+            <ul>
+                <li>Une fenêtre de saisie permet de donner le nombre fois que la boucle s'exécute avec la fonction <b>prompt</b>.</li>
+                <li>La valeur est enregistrée dans une variable <b>valeur</b> avec la commande <b>let</b>.</li><li>La boucle utilise la variable <b>i</b> comme compteur de boucle. Elle s'incrémente de 1 unité jusqu'à la valeur donnée au début du script.</li>
+                <li>On initialise la variable <b>msg</b> avec un caractère vide puis on concatène le message avec <b>+</b> dans la boucle.</li>
+                <li>Le message est affiché dans la console (F12).</li>
+            </ul>
+        </article>
+        <div class="pages"><a href="script06.html">Précédent</a> - <a href="script08.html">Suivant</a></div>
+    </body>
+</html>

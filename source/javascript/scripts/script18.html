@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 18</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+		    function evenements(){
+			// script à écrire
+			
+				function identite(event){
+					// compléter ici
+					
+					
+					// on empeche l'envoi du formulaire au serveur !
+					event.preventDefault();
+				}
+				
+				function effacer(event){
+					document.getElementById("reponse").style.display = "none";
+					// on empeche l'envoi du formulaire au serveur !
+					event.preventDefault();
+				}
+			}
+			window.addEventListener("load",evenements);
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1 class="beautitre">Les formulaires avec JAVASCRIPT</h1>
+        <p id="intro">Le script de cette page doit afficher un message de bienvenue avec le nom et le prénom du lecteur qui auront été saisis dans un formulaire.</p>
+            <h4 id="job">Votre travail:</h4>
+            <ol id="liste-num">
+                <li>Vous devez éditer ce fichier script18.html et compléter le code HTML pour avoir un formulaire contenant :
+                <ul>
+                    <li>Le prénom du lecteur dans un élément <b>input</b></li>
+                    <li>Le nom du lecteur dans un élément <b>input</b></li>
+                    <li>Un bouton pour soumettre le formulaire.</li>
+                </ul>
+                </li>
+                <li>Vous devez compléter le script JAVASCRIPT pour récupérer les valeurs et les afficher dans un message de bienvenue.</li>
+            </ol>
+        <p>Si votre script est correct, en actualisant cette page, vous devez voir votre message de bienvenue écrit ci-dessous.</p>
+        </article>
+		<article>
+		<div class="centre">
+		<form id=formulaire>
+		<p>
+			<label>Saisir votre prénom</label>
+			<input id="Prenom" type="text" value="" />
+		</p>
+		<p>
+			<label>Saisir votre nom</label>
+			<input id="Nom" type="text" value="" />
+		</p>
+		<p class="bouton">
+			<button id="monBouton" type="submit">Valider</button>
+			<button id="effacer" type="submit">Effacer</button>
+		</p>
+		</form>
+		</div>
+		<div id="reponse" class="affiche">
+		Je m'appelle <span id="prenom"></span> <span id="nom"></span>.
+		</div>
+		</article>
+        <div class="pages"><a href="script17.html">Précédent</a> - <a href="../index.html">Index</a></div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 11</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">			
+            function carré(){
+                let nombre = prompt("Saisir le nombre dont vous voulez calculer le carré:");
+				if (nombre.match(/^[0-9]+$/)){
+					let monCarré = nombre * nombre ;
+					document.getElementById('nombre').innerHTML = nombre;
+					document.getElementById('carré').innerHTML = monCarré;
+				}
+            }
+			window.addEventListener("load",carré);
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>Modifier le contenu d'un document HTML avec JAVASCRIPT</h1>
+            <p>Les programmes réalisés jusqu'à présent sont peu utiles pour le document web qui les appelle. 
+			Le véritable intérêt de JAVASCRIPT est de pouvoir interagir avec le document WEB pour le modifier.</p>
+            <p>On peut modifier directement le document WEB aussitôt après son chargement.<br />
+            Pour modifier un document WEB, JAVASCRIPT utilise la gestion des événements.</p>
+			<p>L'événement utilisé ici est le chargement de la page : <b>load</b>.<br />
+			Tant que la page n'a pas fini de charger, le script ne s'exécute pas. À la fin du chargement, le script 
+			s'exécute. Nous verrons la gestion des événements plus loin.</p>
+			<p>Pour modifier la page, il faut accéder à l'emplacement de la page à changer. Pour ce faire, JAVASCRIPT utilise 
+			les différentes balises, identifiants ou classes du document HTML avec des méthodes comme:
+            <ol>
+                <li>document.<b>getElementById('id')</b> qui accède à un identifiant de la page;</li>
+                <li>document.<b>getElementsByClassName('class')</b> qui accède aux éléments possédant la classe;</li>
+                <li>document.<b>querySelector('selecteur')</b> qui accède au premier sélecteur de la page;</b></li>
+				<li>document.<b>querySelectorAll('selecteur')</b> qui accède aux sélecteurs de la page.</b></li>
+            </ol>
+			</p>
+           <p>Dans notre exemple, une fois la page chargée, le script s'exécute en affichant une fenêtre
+			demandant la valeur d'un nombre dont on veut calculer le carré.<br/>
+			Une fois saisi, la valeur du nombre et son carré sont insérés dans la page (dans le cadre en rouge).</p>
+            <div id="exemple" class="centre">
+            <p>Le carré du nombre <span id="nombre">1</span> est égal au nombre <span id="carré">1</span>.
+            </div>
+            <h5>Le script JAVASCRIPT dans le <b>&lt;head&gt;</b> du document</h6>
+            <dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>function carré(){
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let nombre = prompt("Saisir le nombre dont vous voulez calculer le carré:");</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let monCarré = nombre * nombre ;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('nombre').innerHTML = nombre;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('carré').innerHTML = monCarré;</dd>
+                <dd>}</dd>
+				<dd>window.addEventListener("load",carré);</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+            <h5>Le code HTML dans le <b>&lt;body&gt;</b> du document qui recevra les valeurs à afficher</h6>  
+            <dl>
+                <dt>&lt;/body&gt;</dt>
+                <dd>...</dd>
+                <dd>&lt;p&gt;Le carré du nombre &lt;span id="nombre"&gt;1&lt;/span&gt; est égal au nombre &lt;span id="carré"&gt;1&lt;/span&gt;.&lt;/p&gt;</dd>
+            <dd>...</dd>  
+            <dt>&lt;/body&gt;</dt> 
+            </dl>
+            
+            <h4>Commentaires:</h4>
+            <ul>
+                <li>On crée une fonction <b>carré()</b> sans paramètre qui sera exécutée à la fin du chargement de la page web.</li>
+                <li>On utilise encore une fenêtre de saisie avec la fonction <b>prompt</b>.</li>
+                <li>La valeur est enregistrée dans une variable <b>nombre</b> avec la commande <b>let</b>.</li>
+                <li>On utilise 2 fois la méthode <b>getElementById('id')</b> pour repérer les 2 parties du 
+				document web à modifier: <b>nombre</b> et <b>carré</b>.</li>
+                <li>On enchaine avec la méthode <b>innerHTML</b> pour modifier la valeur à afficher.</li>
+                <li>Le document WEB est modifié aussitôt après la saisi du nombre modifiant ainsi les valeurs initiales.</li>
+            </ul>
+        </article>
+        <div class="pages"><a href="script10.html">Précédent</a> - <a href="script12.html">Suivant</a></div>
+
+    </body>
+</html>

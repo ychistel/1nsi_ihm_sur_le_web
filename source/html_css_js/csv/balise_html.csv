@@ -1,0 +1,16 @@
+Structure;Balises;Attributs
+titre niveau 1; <h1>...</h1> ;
+titre niveau 2; <h2>...</h2> ;
+titre niveau 3; <h3>...</h3> ;
+titre niveau 4; <h4>...</h4> ;
+titre niveau 5; <h5>...</h5> ;
+titre niveau 6; <h6>...</h6> ;
+paragraphe ; <p>...</p> ;
+italique ; <i>...</i> ;
+gras ; <b>...</b> ;
+emphase ; <em>...</em> ;
+image ; <img /> ; src=\"lien vers fichier image\" width=\"largeur image en px\"
+lien hypertexte ; <a>...</a>; href=\"lien vers contenu\" title=\"texte associé au lien\" alt=\"texte alternatif\"
+liste numérotée ; <ol> items de liste </ol>;
+liste à puces ; <ul> items de liste </ul>;
+item de liste ;<li>contenu</li>;

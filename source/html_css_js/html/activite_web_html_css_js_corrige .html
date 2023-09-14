@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Première page web</title>
+<meta charset='utf-8' />
+<!--link type="text/css" href="mon_style.css" rel="stylesheet" /-->
+	<link type="text/css" href="../css/style.css" rel="stylesheet">	
+    <script type="text/javascript" src="../js/script_corrige.js"></script>
+</head>
+<body>
+<h1 id="titre1" onmouseover='changeCouleur()'>Fonctionnement du WEB</h1>
+<img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="200px" onmouseover="encadrer()" />
+
+<button id="btn" onclick='saisir_nom();''>Cliquer</button>
+<p id="message"></p>
+
+<h2>Introduction</h2>
+<p>Le mot WEB est une abréviation de l'expression World Wide WEB qui signifie "toile d'araignée 
+de taille mondiale".</p>
+<img class='cadre' src="https://upload.wikimedia.org/wikipedia/commons/d/db/Spider_web_Belgium_Luc_Viatour.jpg"- width="360px" />
+<p>Le principe du WEB consiste à relier des documents entre eux via des liens hypertextes. Un lien 
+hypertexte est un mot, une phrase ou une image qui permet d'accéder au document vers lequel il 
+renvoie. Pour afficher et lire un document du WEB, on utilise un logiciel appelé navigateur. 
+Il en existe de nombreux comme FIREFOX, CHROME, EDGE, OPERA, SAFARI,...</p>
+<h2>Langages du WEB</h2>
+<p>Différents langages sont utilisés pour structurer et afficher les documents du WEB :</p>
+<ol>
+<li>Le langage HTML qui est composé du contenu et de la structure du document à afficher par le 
+navigateur ;</li>
+<li>Le langage CSS qui assure la mise en page et l'apparence graphique du document ;</li>
+<li>Le langage JAVASCRIPT qui permet d'ajouter de l'interactivité au document.</li>
+</ol>
+<h2>Langage HTML</h2>
+<p>HTML est l'acronyme de Hyper Text Markup Language signifiant Langage de Balisage Hyper Texte. 
+Un fichier en langage HTML est un fichier texte qui est composé du contenu à afficher et de la 
+structure du document selon laquelle le contenu est organisé : titre, paragraphe, emphase, liste, 
+lien, tableau, image et média. La structure du document en langage HTML se fait avec des balises. 
+D'ailleurs, HTML est aussi appelé langage de balisage.</p>
+<h2>Balisage</h2>
+<p>Les balises HTML sont des mots encadrés par les caractères < et > appelés chevrons. Elles diffèrent 
+selon le contenu à afficher. Par exemple, l'affichage d'une image utilise la balise &lt;img /&gt; alors 
+que la balise pour un paragraphe est &lt;p&gt;.</p>
+On a 2 types de balises:
+<ul>
+<li>Les balises ouvrantes et fermantes : &lt;balise&gt; contenu &lt;/balise&gt;. C'est le cas de la balise de paragraphe.</li>
+<li>Les balises vides : &lt;balise /&gt;. C'est la cas de la balise pour afficher une image.</li>
+</ul>
+<p>Les balises peuvent contenir des attributs qui sont des propriétés supplémentaires à appliquer au 
+contenu à afficher. Pour une image, il est nécessaire d'ajouter le nom de fichier utilisé. L'attribut 
+utilisé dans la balise est src.</p>
+
+<script type="text/javascript">
+function changeCouleur(){
+    document.getElementById("titre1").style.color = 'blue';
+	}
+</script>
+</body >
+
+</html>
+

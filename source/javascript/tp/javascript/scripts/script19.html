@@ -1,0 +1,70 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">			
+            function formulaire(){
+				let method=document.querySelector('form')["method"];
+				console.log(method);
+                let monBouton = document.getElementById("monBouton");
+                let monPrenom = document.getElementById("monPrenom");
+				let monNom = document.getElementById("monNom");
+				let monAge = document.getElementById("monAge");
+                monBouton.addEventListener("click", identite);
+                
+                function identite(event){
+					console.log(monPrenom.value);
+					console.log(monNom.value);
+					console.log(monAge.value);
+					window.localStorage.setItem("prenom",monPrenom.value);
+					window.localStorage.setItem("nom",monNom.value);
+					window.localStorage.setItem("age",monAge.value);
+                    // on empeche l'envoi du formulaire au serveur !
+                    //event.preventDefault();
+					if (method=='post'){
+						document.getElementById("post").style.display="block";
+						document.getElementById("formulaire").style.display="none";
+					}
+                }
+				
+            }
+			window.addEventListener("load",formulaire);
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1 id="titre">Requête HTTP avec un FORMULAIRE</h1>
+		<div id="post">
+		<p>Vous avez réalisé un formulaire avec la méthode <b>post</b>. Les données envoyées ne sont pas visibles dans l'url
+		et nécessitent un traitement côté serveur.</p>
+		<p>Les valeurs envoyées par le formulaire sont:
+		</div>
+		<div id="formulaire">
+            <p>Jusqu'à maintenant, la valeur saisie se fait avec la fonction <b>prompt</b> qui est appelée avant le chargement de la page WEB. Ce n'est pas idéal.</p>
+            <p>On peut inclure dans la page WEB une zone pour saisir les valeurs souhaitées.<br />
+                Pour cela, on utilise les <b>formulaires</b> HTML :</p>
+            <ol>
+                <li>L'élément formulaire HTML se fait avec les balises &lt;form&gt; et &lt;/form&gt;.</li>
+                <li>Cet élément comprendra plusieurs éléments : un label, un champ de saisie et un bouton de validation.</li>
+                <li>Le label est le message indiquant la saise à effectuer. Les balises sont &lt;label&gt; et &lt;/label&gt;.
+                <li>Le champ de saisie se fait avec la balise &lt;input /&gt;. Un attribut <b>type</b> sera ajouté.</li>
+                <li>Le bouton de validation avec les balises &lt;button&gt; et &lt;/button&gt;. L'attribut <b>submit</b> sera ajouté pour soumettre le formulaire à un envoi.</li>
+            </ol>
+            <div id="exemple" class="centre">
+				<form method="get" >
+					<label>Saisir votre prénom:</label>
+					<input name="prenom" id="monPrenom" type="text" value="" /><br/>
+					<label>Saisir votre nom:</label>
+					<input name="nom" id="monNom" type="text" value="" /><br/>
+					<label>Saisir votre âge:</label>
+					<input name="age" id="monAge" type="text" value="21" /><br/>
+					<button id="monBouton">Valider</button>
+				</form>
+            </div>
+        </div>
+        </article>
+        <div class="pages"><a href="script16.html">Précédent</a> - <a href="script18.html">Suivant</a></div>
+    </body>
+</html>

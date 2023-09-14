@@ -1,0 +1,24 @@
+Structure;Balises;Attributs
+titre ; <h1>...</h1> ;
+sous-titre ; <h2>...</h2> ;
+; <h3>...</h3> ;
+; <h4>...</h4> ;
+; <h5>...</h5> ;
+; <h6>...</h6> ;
+paragraphe ; <p>...</p> ;
+italique ; <i>...</i> ;
+gras ; <b>...</b> ;
+emphase ; <em>...</em> ;
+image ; <img /> ; src="lien vers fichier image"
+; ; width="largeur image en px"
+lien hypertexte ; <a>...</a>; href="lien vers contenu"
+; ; title="texte associé au lien"
+; ; alt="texte alternatif"
+liste numérotée ; <ol>;
+;<li>contenu 1</li>;
+;<li>contenu 2</li>;
+;</ol>;
+liste à puces ; <ul>;
+;<li>contenu</li>;
+;<li>contenu</li>;
+;</ul>;

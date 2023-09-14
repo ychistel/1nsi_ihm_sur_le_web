@@ -1,0 +1,46 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 6</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+            // Signe d'un nombre !
+			window.addEventListener("load", function(event){
+				let nombre = prompt("Saisir un nombre");
+				if (nombre<0){
+					console.log("Le nombre "+nombre+" est négatif.");
+				} else {
+					console.log("Le nombre "+nombre+" est positif.");
+				}
+			});
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>Structure if ... else ... en JAVASCRIPT</h1>
+        <p>Le script de cette page doit demander un nombre et afficher un message précisant s'il est négatif ou positif.</p>
+            <h4>Votre travail:</h4>
+            <ol>
+                <li>Vous devez éditer ce fichier script06.html et compléter le script JAVASCRIPT.</li>
+                <li>Le nombre sera saisi par le lecteur dans une fenêtre avec <b>prompt</b>.</li>
+                <li>Un message donnant le signe (négatif ou positif) du nombre sera affiché dans la console.</li>
+            </ol>
+        <p>Si votre script est correct, il doit ressembler à celui-ci:</p>
+		
+		<p>
+			<dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>let nombre = prompt("Saisir un nombre");</dd>
+                <dd>if (nombre<0){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Le nombre "+nombre+" est négatif.");</dd>
+                <dd>} else {</dd>
+				<dd>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Le nombre "+nombre+" est positif.");</dd>
+                <dd>}</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+		</p>
+        </article>
+        <div class="pages"><a href="script05.html">Précédent</a> - <a href="script07.html">Suivant</a></div>
+    </body>
+</html>

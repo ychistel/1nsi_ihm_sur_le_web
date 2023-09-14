@@ -1,0 +1,38 @@
+Fonctionnement du WEB
+--- image ---
+- source : https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg
+- largeur : 200px
+-------------
+Introduction
+Le mot WEB est une abréviation de l'expression World Wide WEB qui signifie "toile d'araignée 
+de taille mondiale".
+--- image ---
+- source : https://upload.wikimedia.org/wikipedia/commons/d/db/Spider_web_Belgium_Luc_Viatour.jpg
+- largeur : 360px
+-------------
+Le principe du WEB consiste à relier des documents entre eux via des liens hypertextes. Un lien 
+hypertexte est un mot, une phrase ou une image qui permet d'accéder au document vers lequel il 
+renvoie. Pour afficher et lire un document du WEB, on utilise un logiciel appelé navigateur. 
+Il en existe de nombreux comme FIREFOX, CHROME, EDGE, OPERA, SAFARI,...
+Langages du WEB
+Différents langages sont utilisés pour structurer et afficher les documents du WEB :
+Le langage HTML qui est composé du contenu et de la structure du document à afficher par le 
+navigateur ;
+Le langage CSS qui assure la mise en page et l'apparence graphique du document ;
+Le langage JAVASCRIPT qui permet d'ajouter de l'interactivité au document.
+Langage HTML
+HTML est l'acronyme de Hyper Text Markup Language signifiant Langage de Balisage Hyper Texte. 
+Un fichier en langage HTML est un fichier texte qui est composé du contenu à afficher et de la 
+structure du document selon laquelle le contenu est organisé : titre, paragraphe, emphase, liste, 
+lien, tableau, image et média. La structure du document en langage HTML se fait avec des balises. 
+D'ailleurs, HTML est aussi appelé langage de balisage.
+Balisage
+Les balises HTML sont des mots encadrés par les caractères < et > appelés chevrons. Elles diffèrent 
+selon le contenu à afficher. Par exemple, l'affichage d'une image utilise la balise <img /> alors 
+que la balise pour un paragraphe est <p>.
+On a 2 types de balises:
+Les balises ouvrantes et fermantes : <balise> contenu </balise>. C'est le cas de la balise de paragraphe.
+Les balises vides : <balise />. C'est la cas de la balise pour afficher une image.
+Les balises peuvent contenir des attributs qui sont des propriétés supplémentaires à appliquer au 
+contenu à afficher. Pour une image, il est nécessaire d'ajouter le nom de fichier utilisé. L'attribut 
+utilisé dans la balise est src.

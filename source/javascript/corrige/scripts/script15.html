@@ -1,0 +1,98 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+            function evenements(){
+                let monTitre = document.getElementById("titre");
+                monTitre.addEventListener('click',changeCouleurTitre);
+                
+                function changeCouleurTitre(event){
+                    monTitre.style.color = "red";
+                }
+                
+                let monIntro = document.getElementById("intro");
+                monIntro.addEventListener('mouseover',changeCouleurFond);
+				monIntro.addEventListener('click',function(){
+					monIntro.style.background = "#fff";
+				});
+                
+                function changeCouleurFond(event){
+                    monIntro.style.background = "#aaa";
+                }
+                
+                let monScript = document.getElementById("script");
+                monScript.addEventListener('mouseover',changeCouleurTexte);
+                monScript.addEventListener('mouseout',restaureCouleurTexte);
+                
+                function changeCouleurTexte(event){
+                    monScript.style.color = "blue";
+                }
+                function restaureCouleurTexte(event){
+                    monScript.style.color = "#4E4E4E";
+                }
+            }
+			window.addEventListener("load",evenements);
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1 id="titre">Interagir avec le document en JAVASCRIPT</h1>
+            <p id="intro">JAVASCRIPT est un langage qui a la capacité d'écouter, attendre les actions du lecteur. Si le lecteur utilise sa souris, on effectue des actions sur le document WEB. De même avec le clavier.</p>
+            <p>Le script associé à cette page change les règles CSS de certains éléments HTML du document selon l'usage de la souris.</p>
+            <ol>
+                <li>Le titre change de couleur si on clique dessus.</li>
+                <li>Le fond du paragraphe d'introduction change de couleur lorsque la souris l'a survolé.</li>
+                <li>Le script JAVASCRIPT est de couleur bleue lorsque la souris le survole.</li>
+            </ol>
+            <p>Les objets JAVASCRIPT utilisés sont des <b>événements</b>. <br />
+            La syntaxe est la suivante : sélecteur.<b>addEventListener</b>('action', <i>fonction à exécuter</i>);</p>
+
+            <p>La fonction appelée modifiera les règles CSS du sélecteur appelé.</p>
+
+            <p>Le script JAVASCRIPT associé à cette page est donné ci-dessous:</p>
+            <p>Le code est donné ci-dessous:</p>
+            <dl id="script">
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>function evenements(){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let monTitre = document.getElementById("titre");</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;monTitre.addEventListener('click',changeCouleurTitre);</dd>
+                <dd><br /></dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;function changeCouleurTitre(event){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;monTitre.style.color = "red";</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                <dd><br /></dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let monIntro = document.getElementById("intro");</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;monIntro.addEventListener('mouseover',changeCouleurFond);</dd>
+                <dd><br /></dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;function changeCouleurFond(event){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;monIntro.style.background = "#aaa";</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                <dd><br /></dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let monScript = document.getElementById("script");</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;monScript.addEventListener('mouseover',changeCouleurTexte);</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;monScript.addEventListener('mouseout',restaureCouleurTexte);</dd>
+                <dd><br /></dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;function changeCouleurTexte(event){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;monScript.style.color = "blue";</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;function restaureCouleurTexte(event){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;monScript.style.color = "#4E4E4E";</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                <dd>}</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+            <h4>Commentaires:</h4>
+            <ul>
+                <li>On repère l'élément HTML sur lequel on veut agir. On attribue un identifiant s'il n'en a pas.</li>
+                <li>Dans le script, on applique la methode <b>addEventListener()</b> sur l'identifiant HTML.</li>
+                <li>Il faut préciser la nature du déclencheur de l'action (click de souris) et la fonction à appliquer.</li>
+                <li>On crée la fonction qui modifie les règles CSS de l'élément HTML ciblé.</li>
+                <li>On n'oublie pas de lancer l'exécution du script à la fin du document WEB.</li>
+            </ul>
+        </article>
+        <div class="pages"><a href="script14.html">Précédent</a> - <a href="script16.html">Suivant</a></div>
+    </body>
+</html>

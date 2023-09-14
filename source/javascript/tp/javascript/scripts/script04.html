@@ -1,0 +1,58 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 4</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+		<style type="text/css">
+		#cor04{display:none}
+		button{margin:16px auto;}
+		</style>
+		<script type="text/javascript">
+			window.addEventListener("load", function(event) {
+				//votre script de calcul d'aire du rectangle ici !
+				
+			});
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>Aire d'un rectangle</h1>
+        <p>Le script de cette page doit calculer l'aire d'un rectangle dont les dimensions sont saisies par le lecteur. On suppose que les valeurs sont correctement saisies et ne sont pas contrôlées.</p>
+            <h4>Votre travail:</h4>
+            <ol>
+                <li>Vous devez éditer ce fichier script04.html et compléter le script JAVASCRIPT pour calculer l'aire d'un rectangle.</li>
+                <li>La largeur et la longueur du rectangle seront à saisir par le lecteur en 2 fois.</li>
+                <li>La valeur finale sera affichée dans la console.</li>
+            </ol>
+        <p>Si votre script est correct, il doit ressembler à celui-ci:</p>
+		<button onclick="montrer()">Correction</button>
+		<div id="cor04" >
+			<dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>let longueur = prompt('Quelle est la longueur du rectangle ?');</dd>
+                <dd>console.log('La longueur du rectangle est : '+ longueur);</dd>
+                <dd>let largeur = prompt('Quelle est la largeur du rectangle ?');</dd>
+                <dd>console.log('La largeur du rectangle estt : '+ largeur);</dd>
+				<dd>let aire = longueur * largeur;</dd>
+                <dd>console.log("L'aire du rectangle est " + aire);</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+		</div>
+            
+        </article>
+        <div class="pages"><a href="script03.html">Précédent</a> - <a href="script05.html">Suivant</a></div>
+		<script type="text/javascript">
+		let n = 1;
+		function montrer(){
+		if (n==1){
+			document.getElementById("cor04").style.display = "block";
+			n = n - 1;
+			} else {
+			document.getElementById("cor04").style.display = "none";
+			n = 1;
+			}
+		}
+		</script>
+    </body>
+</html>

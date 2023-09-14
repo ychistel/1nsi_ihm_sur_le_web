@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 17</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+            function evenements(){
+                let monBouton = document.getElementById("monBouton");
+                let maValeur = document.getElementById("maValeur");
+                monBouton.addEventListener("click", carré);
+                
+                function carré(event){
+                    let nombre = maValeur.value;
+                    let monCarré = nombre*nombre;
+                    document.getElementById("nombre").innerHTML=nombre;
+                    document.getElementById("carré").innerHTML=monCarré;
+					
+                    // on empeche l'envoi du formulaire au serveur !
+                    event.preventDefault();
+                }
+            }
+			window.addEventListener("load", evenements);
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1 id="titre">Interagir avec un FORMULAIRE</h1>
+            <p>Jusqu'à maintenant, la valeur saisie s'est faite avec la fonction <b>prompt</b> qui est 
+			appelée après le chargement de la page WEB. Ce n'est pas idéal.</p>
+            <p>On peut inclure dans la page WEB une zone pour saisir les valeurs souhaitées.<br />
+                Pour cela, on utilise les <b>formulaires</b> HTML :</p>
+            <ol>
+                <li>L'élément formulaire HTML se fait avec les balises &lt;form&gt; et &lt;/form&gt;.</li>
+                <li>Cet élément comprendra plusieurs éléments : un label, un champ de saisie et un bouton de validation.</li>
+                <li>Le label est le message indiquant la saise à effectuer. Les balises sont &lt;label&gt; et &lt;/label&gt;.
+                <li>Le champ de saisie se fait avec la balise &lt;input /&gt;. Un attribut <b>type</b> sera ajouté.</li>
+                <li>Le bouton de validation avec les balises &lt;button&gt; et &lt;/button&gt;. L'attribut <b>submit</b> sera ajouté pour soumettre le formulaire à un envoi.</li>
+            </ol>
+            <div id="exemple" class="centre">
+            <form id="formulaire" method="get">
+                <label>Saisir le nombre dont vous voulez le carré:</label>
+                <input id="maValeur" name="valeur" type="text" value="1" />
+                <button id="monBouton" type="submit">Valider</button>
+            </form>
+            <p>Le carré du nombre <span id="nombre">1</span> est égal à <span id="carré">1</span>.</p>
+            </div>
+            <p>Le formulaire ci-dessus de cette page a pour code HTML:</p>
+            
+            <dl>
+                <dt>&lt;form id="formulaire"&gt;</dt>
+                <dd>&lt;label&gt;Saisir le nombre dont vous voulez le carré:&lt;/label&gt;</dd>
+                <dd>&lt;input id="maValeur" type="text" value="1" /&gt;</dd>
+                <dd>&lt;button id="monBouton" type="submit"&gt;Valider&lt;/button&gt;</dd>
+                <dt>&lt;/form&gt;</dt>
+            </dl>
+            <p>Le script JAVASCRIPT associé à cette page gère la saisie et l'affichage de la réponse du formulaire. Il est aussi à l'écoute d'un événement lié au clic de la souris sur le bouton d'envoi du formulaire.</p>
+            <p>Le code est donné ci-dessous:</p>
+            <dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>function evenements(){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let monBouton = document.getElementById("monBouton");</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let maValeur = document.getElementById("maValeur");</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;monBouton.addEventListener("click", carré);</dd>
+                <dd><br /></dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;function carré(event){</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let nombre = maValeur.value;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let monCarré = nombre*nombre;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("nombre").innerHTML=nombre;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("carré").innerHTML=monCarré;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// on empeche l'envoi du formulaire au serveur !</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;event.preventDefault();</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                <dd>}</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+            <h4>Commentaires:</h4>
+            <ul>
+                <li>On crée une fonction <b>événements()</b> sans paramètre qui sera appelée à la fin du chargement de la page web.</li>
+                <li>On déclare un événement de type "clic de souris" sur l'élément HTML bouton de type "submit".</li>
+                <li>Cet événement est associé à la fonction <b>carré()</b>.</li>
+                <li>La fonction <b>carré()</b>récupère la valeur de la zone de saisie et calcule le carré de cette valeur.<br />
+                Ensuite, les valeurs sont ajoutées au document WEB avec la méthode innerHTML.</li>
+                <li>La dernière ligne du script empêche l'envoi du formulaire sans quoi la page web serait rechargée et il serait impossible de voir l'exécution du script.</li>
+            </ul>
+        </article>
+        <div class="pages"><a href="script16.html">Précédent</a> - <a href="script18.html">Suivant</a></div>
+    </body>
+</html>

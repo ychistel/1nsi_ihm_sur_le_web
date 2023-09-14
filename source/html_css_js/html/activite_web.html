@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="description" content="Une super première page web" />
+	<title>Introduction au WEB</title>
+	<!--link type="text/css" href="mon_style.css" rel="stylesheet" /-->
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&display=swap" rel="stylesheet">	
+    <style type="text/css">
+	body{
+	    font-family: Verdana,sans-serif;
+		font-family: 'Averia Sans Libre', cursive;
+		font-size:1.2em;
+		line-height:1.5em;
+		width:1080px;
+		margin:auto;
+	}
+	h1{
+		text-align:center;
+		font-size:3em;
+	}
+	h2{
+		color:royalblue;
+		color:rgb(65,105,225);
+		color:#4169E1;
+	}
+	img{
+		display:block;
+		margin:16px auto;
+	}
+	.cadre{
+		border:solid 1px #eee;
+		box-shadow:4px 4px #aaa;
+		padding:8px;
+	}
+
+	</style>
+	<!--script type="text/javascript" href="script.js"></script-->
+	<script type="text/javascript">
+
+	function survoler() {
+	  	logo.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/340px-CSS3_logo_and_wordmark.svg.png?uselang=fr";
+		logo.style.width="140px";
+		setTimeout(quitter,3000);
+
+	}
+	function quitter() {
+	  	logo.src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/HTML5_logo_resized.svg/340px-HTML5_logo_resized.svg.png";
+		logo.style.width="140px";
+		setTimeout(cliquer,3000);
+	}
+	function cliquer() {
+	  	logo.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/340px-Javascript-shield.svg.png";
+		logo.style.width="140px";
+		setTimeout(survoler,3000);
+	}
+	</script>
+	
+</head>
+<body>
+<h1>Fonctionnement du WEB</h1>
+<img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/HTML5_logo_resized.svg/340px-HTML5_logo_resized.svg.png" width="140px" onclick='cliquer()'  />
+<h2>Introduction</h2>
+
+<p>Le mot <a href="https://fr.wikipedia.org/wiki/WEB" title="page wikipedia sur Web">WEB</a> est une abréviation de l'expression World Wide WEB qui signifie "toile d'araignée de taille mondiale".<br />
+<img  class="cadre" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Spider_web_Belgium_Luc_Viatour.jpg" width=360px /><br/>
+Le principe du WEB consiste à relier des documents entre eux via des liens hytpertextes. Un lien hypertexte est un mot, une phrase ou une image qui permet d'accéder au document vers lequel il renvoie.<br/>
+Pour afficher et lire un document du WEB, on utilise un logiciel appelé navigateur. Il en existe de nombreux comme FIREFOX, CHROME, EDGE, OPERA, SAFARI,...</p>
+
+<h2>Langages du WEB</h2>
+<div>
+<p>Différents langages sont utilisés pour structurer et afficher les documents du WEB :</p>
+<ol>
+<li> Le langage HTML qui est composé du contenu et de la structure du document à afficher par le navigateur ;</li>
+<li> Le langage CSS qui assure la mise en page et l'apparence graphique du document ;</li>
+<li> Le langage JAVASCRIPT qui permet d'ajouter de l'interactivité au document.
+</ol>
+</div>
+
+<h2>Langage HTML</h2>
+<p><a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" title="page wikipedia sur HTML">HTML</a> est l'acronyme de <em>Hyper Text Markup Language</em> signifiant Langage de Balisage Hyper Texte.
+Un fichier en langage HTML est un fichier texte qui est composé du contenu à afficher et de la structure du document selon laquelle le contenu est organisé : titre, paragraphe, emphase, liste, lien, tableau, image et média.
+La structure du document en langage HTML se fait avec des balises. D'ailleurs, HTML est aussi appelé langage de balisage.</p>
+
+<h2>Balisage</h2>
+<p>Les balises HTML sont des mots encadrés par les caractères < et > appelés <i>chevrons</i>. Elles diffèrent selon le contenu à afficher. Par exemple, l'affichage d'une image utilise la balise &lt;img /&gt; alors que la balise pour un paragraphe est &lt;p&gt; . <br/>
+
+On a 2 types de balises:</p>
+<ul>
+<li> Les balises <b>ouvrantes</b> et <b>fermantes</b> : &lt;balise&gt; contenu &lt;/balise&gt;. C'est le cas de la balise de paragraphe.</li>
+<li> Les balises <b>vides</b> : &lt;balise /&gt;. C'est la cas de la balise pour afficher une image. </li>
+</ul>
+<p>Les balises peuvent contenir des <i>attributs</i> qui sont des propriétés supplémentaires à appliquer au contenu à afficher. Pour une image, il est nécessaire d'ajouter le nom de fichier utilisé. L'attribut utilisé dans la balise est src.</p>
+</body>
+
+</html>
+

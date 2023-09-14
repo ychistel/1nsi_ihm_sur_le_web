@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">			
+            function formulaire(){
+				let methode="get";
+				let maMethode=document.getElementById("monChoix");
+				methode = maMethode.addEventListener("click",choisir);
+                let monBouton = document.getElementById("monBouton");
+                let monPrenom = document.getElementById("monPrenom");
+				let monNom = document.getElementById("monNom");
+				let monAge = document.getElementById("monAge");
+                monBouton.addEventListener("click", identite);
+				
+                function choisir(event){ 
+					let choix=document.querySelector("form#choix");
+					if (choix[0].checked){
+						methode=choix[0].value;
+					}
+					else if (choix[1].checked){
+						methode=choix[1].value;
+					}
+					document.querySelector("form#formulaire").method=methode;
+					console.log(methode);
+					event.preventDefault();
+					return methode;
+				}
+				
+                function identite(event){
+					console.log(monPrenom.value);
+					console.log(monNom.value);
+					console.log(monAge.value);
+					window.localStorage.setItem("prenom",monPrenom.value);
+					window.localStorage.setItem("nom",monNom.value);
+					window.localStorage.setItem("age",monAge.value);
+                    // on empeche l'envoi du formulaire au serveur !
+                    event.preventDefault();
+					if (methode=='post'){
+						document.getElementById("post").style.display="block";
+						document.getElementById("formulaire").style.display="none";
+					}
+					if (methode=='get'){
+						document.getElementById("get").style.display="block";
+						document.getElementById("formulaire").style.display="none";
+					}
+                }
+				
+            }
+			window.addEventListener("load",formulaire);
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1 id="titre">Requête HTTP avec un FORMULAIRE</h1>
+		<div id="post">
+		<p>Vous avez réalisé un formulaire avec la méthode <b>post</b>. Les données envoyées ne sont pas visibles dans l'url
+		et nécessitent un traitement côté serveur.</p>
+		<p>Les valeurs envoyées par le formulaire sont:
+		</div>
+		<div id="get">
+		<p>Vous avez réalisé un formulaire avec la méthode <b>get</b>. Les données envoyées sont visibles dans l'url placées derrièle le point d'interogation ? et séparées
+		par l'esperluette &.
+		Après envoi au serveur, les données sont analysées et une page réponse est renvoyée au client.</p>
+		<p>Les valeurs envoyées par le formulaire sont:
+		</div>
+		<div id="choixmethode">
+		<p>Choisissez votre méthode d'envoi de données : POST ou GET.
+		<form id="choix" method="post">			
+			<input type="radio" id="postmethode" name="methode" value="post" checked>
+			<label>POST</label>
+			<input type="radio" id="getmethode" name="methode" value="get">
+			<label>GET</label>
+			<button id="monChoix">Choisir</button>
+		</form>
+		</div>
+		<div>
+            <form id="formulaire" method="get" >
+					<label>Saisir votre prénom:</label>
+					<input name="prenom" id="monPrenom" type="text" value="" /><br/>
+					<label>Saisir votre nom:</label>
+					<input name="nom" id="monNom" type="text" value="" /><br/>
+					<label>Saisir votre âge:</label>
+					<input name="age" id="monAge" type="text" value="21" /><br/>
+					<button id="monBouton">Valider</button>
+				</form>
+            </div>
+        </div>
+        </article>
+        <div class="pages"><a href="script18.html">Précédent</a> - <a href="script20.html">Suivant</a></div>
+    </body>
+</html>

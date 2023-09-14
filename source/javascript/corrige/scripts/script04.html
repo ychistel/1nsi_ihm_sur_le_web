@@ -1,0 +1,46 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 4</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+		<script type="text/javascript">
+			window.addEventListener("load", function(event) {
+				let longueur = prompt('Quelle est la longueur du rectangle ?');
+				console.log('La longueur du rectangle est : '+ longueur);
+				let largeur = prompt('Quelle est la largeur du rectangle ?');
+				console.log('La largeur du rectangle estt : '+ largeur);
+				let aire = longueur * largeur;
+				console.log("L'aire du rectangle est " + aire);			
+			});
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>Aire d'un rectangle</h1>
+        <p>Le script de cette page doit calculer l'aire d'un rectangle dont les dimensions sont saisies par le lecteur. On suppose que les valeurs sont correctement saisies et ne sont pas contrôlées.</p>
+            <h4>Votre travail:</h4>
+            <ol>
+                <li>Vous devez éditer ce fichier script04.html et compléter le script JAVASCRIPT pour calculer l'aire d'un rectangle.</li>
+                <li>La largeur et la longueur du rectangle seront à saisir par le lecteur en 2 fois.</li>
+                <li>La valeur finale sera affichée dans la console.</li>
+            </ol>
+        <p>Si votre script est correct, il doit ressembler à celui-ci:</p>
+		
+		<p>
+			<dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>let longueur = prompt('Quelle est la longueur du rectangle ?');</dd>
+                <dd>console.log('La longueur du rectangle est : '+ longueur);</dd>
+                <dd>let largeur = prompt('Quelle est la largeur du rectangle ?');</dd>
+                <dd>console.log('La largeur du rectangle estt : '+ largeur);</dd>
+				<dd>let aire = longueur * largeur;</dd>
+                <dd>console.log("L'aire du rectangle est " + aire);</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+		</p>
+            
+        </article>
+        <div class="pages"><a href="script03.html">Précédent</a> - <a href="script05.html">Suivant</a></div>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Objets rectangles</title>
+    <style>
+        #canvas{border:solid 1px #ccc;}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="300"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // objet rectangle
+        var rectangle = function(x,y,w,h){
+            // attributs
+            this.x = x;
+            this.y = y;
+            this.width = w;
+            this.height = h;
+            // méthodes
+            this.deplacerHorizontalement = function(){
+                this.x += 2;
+            }
+        }
+       
+
+    </script>
+
+//let currentRect = null;
+const dx = 5;
+const dy = 5;
+// Définir la hauteur et la position du rectangle
+const rect = { x: 50, y: canvas.height - 50, width: 40, height: 50 , color:'red'};
+// Position tempon libre
+const freePos = { x: 0, y: 0 };
+
+// Dessiner le rectangle
+function drawRectangle() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = rect.color;
+    ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+}
+
+// Déplacer le rectangle
+function moveRectangle(f) {
+    if (rect.y > f.y){
+        rect.y -= dy;
+        drawRectangle();
+    } else if (rect.x > f.x){
+        rect.x -= dx;
+        drawRectangle();
+    } else{
+        console.log('terminé');
+        clearInterval(itv);
+        freePos.x = tampon.x;
+        freePos.y = tampon.y;
+        console.log("freePos",freePos);
+    }
+}
+
+// Détecter le début du déplacement du rectangle
+function onMouseDown(e) {
+    if (e.offsetX >= rect.x &&
+        e.offsetX <= rect.x + rect.width &&
+        e.offsetY >= rect.y &&
+        e.offsetY <= rect.y+rect.height){
+            tampon = {x:rect.x, y: rect.y}
+            console.log('on déplace');
+            itv = setInterval(moveRectangle,10,freePos);
+        }   
+}
+
+// Déplacer le rectangle en cours de déplacement
+function onMouseMove(e) {
+// Déplacer le rectangle en cours de déplacement (s'il y en a un)
+    if (currentRect) {
+        currentRect.x = e.offsetX - currentRect.width / 2;
+        currentRect.y = e.offsetY - currentRect.height / 2;
+    
+    // Vérifier s'il y a un rectangle à la position du rectangle en cours de déplacement
+
+    if (rect !== currentRect &&
+            currentRect.x + currentRect.width >= rect.x &&
+            currentRect.x <= rect.x + rect.width &&
+            currentRect.y + currentRect.height >= rect.y &&
+            currentRect.y <= rect.y + rect.height) {
+        
+            // Déplacer le rectangle actuel à la position de la place libre
+            const freePos = { x: currentRect.x, y: currentRect.y };
+            currentRect.x = rect.x;
+            currentRect.y = rect.y;
+            rect.x = freePos.x;
+            rect.y = freePos.y;
+        }
+    }
+    drawRectangle();
+}
+
+
+// Arrêter le déplacement du rectangle en cours de déplacement
+function onMouseUp(e) {
+currentRect = null;
+drawRectangle();
+}
+
+canvas.addEventListener('mousedown', onMouseDown);
+
+drawRectangle();
+
+</body>

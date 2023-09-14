@@ -1,0 +1,11 @@
+body{background:#fff;font-family: verdana;font-size:1em;line-height:1.5em;}
+ol li{line-height:2em;}
+article{background:#fff;width:auto;margin:0 auto;padding:0px 1em;}
+dl{display:table;margin:auto;color:#4E4E4E;line-height:1.5em;}
+p{margin-top:1em;}
+span{text-weight:400;color:red;}
+.pages{border:solid 1px #aaa;text-align:center;padding:10px;}
+.centre{border:solid 1px #aaa;margin:1em auto;width:80%;padding:20px;}
+div#post,div#reponse{display:none;}
+.affiche{border:solid 2px #a1e3f9;width:80%;padding:20px;margin:1em auto;background-color:#b1f9a1;}
+p.bouton{margin:8px auto;text-align:center;}

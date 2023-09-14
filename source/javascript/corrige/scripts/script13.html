@@ -1,0 +1,75 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 13</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+            function changeRègleCSS(){
+                // Avec recherche d'un id
+                let monTitre = document.getElementById('titre');
+                monTitre.style.color="red";
+                
+                // Avec recherche d'une classe
+                let maClasse = document.getElementsByClassName('first');
+                console.log(maClasse);
+                maClasse[0].style.border = "solid 1px blue";
+                
+                // Avec recherche de tous les sélecteur "p"
+                let mesPara = document.querySelectorAll("p");
+                let nbTotalPara = mesPara.length;
+                console.log(nbTotalPara);
+                for (i=0 ; i<nbTotalPara ; i++){
+                    mesPara[i].style.padding = "10px";
+                    mesPara[i].style.background = "#eee";
+                }
+            }
+			window.addEventListener("load",changeRègleCSS);
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1 id="titre">Modifier des règles CSS avec JAVASCRIPT</h1>
+            <p class="first">Les programmes JAVASCRIPT permettent de modifier le document WEB dans sa présentation en agissant sur les règles CSS. La manière la plus simple d'y parvenir est de repérer les éléments HTML que l'on veut modifier et appliquer la nouvelle règle CSS. Voici 4 possibilités :</p>
+            <ul>
+                <li>Avec la méthode <b>getElementById()</b> qui cherche un élément HTML avec son identifiant (id).</li>
+                <li>Avec la méthode <b>getElementsByClassName()</b> qui cherche un élément HTML avec une classe (class). Attention, comme il peut y avoir plusieurs éléments HTML ayant la même classe, c'est un tableau qui est renvoyé. Il sera donc nécessaire d'utiliser les indices de position pour appliquer la nouvelle règle CSS au bon élément.</li>
+                <li>Avec la méthode <b>querySelector()</b> qui cherche un élément HTML avec son selecteur (balise). La valeur renvoyée est la première occurence trouvée.</li>
+                <li>Avec la méthode <b>querySelectorAll()</b> qui cherche un élément HTML avec son selecteur (balise). La valeur renvoyée est un tableau contenant toutes les occurences trouvées.</li>
+            </ul>
+            
+            <p>Le script de cette page utilise une fonction pour modifier des règle CSS du document. 
+			Elle est exécutée à la fin du chargement de la page WEB.</p>
+
+            <dl>
+                <dt>&lt;script type="text/javascript"&gt;</dt>
+                <dd>function changeRègleCSS(){</dd>
+                <dd>// Avec recherche d'un id</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let monTitre = document.getElementById('titre');</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;monTitre.style.color="red";</dd>
+                <dd><br /></dd>
+                <dd>// Avec recherche d'une classe</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let maClasse = document.getElementsByClassName('first');</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;maClasse[0].style.border = "solid 1px blue";</dd>
+                <dd><br /></dd>
+                <dd>// Avec recherche de tous les sélecteur "p"</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let mesPara = document.querySelectorAll("p");</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;let nbTotalPara = mesPara.length;</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;console.log(nbTotalPara);</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;for (i=0 ; i<nbTotalPara ; i++){</dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mesPara[i].style.padding = "10px";</dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mesPara[i].style.background = "#eee";</dd>
+                <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                <dd>}</dd>
+                <dt>&lt;/script&gt;</dt>
+            </dl>
+            <h4>Commentaires:</h4>
+            <ul>
+                <li>On repère l'élément qui a l'identifiant "titre". La couleur du titre est changée en rouge : style.color="red"</li>
+                <li>On repère l'élément HTML qui a la classe "first". Ici, un tableau est retourné. On y accède avec son indice placé entre crochets (comme en Python). Une bordure est ajoutée : style.border = "solid 1px blue"; </li>
+                <li>On repère tous les paragraphes avec le sélecteur "p". Il y a 3 paragraphes, donc le tableau est de longueur (dimension) 3. Ses indices sont alors 0, 1 et 2. Pour modifier les règles CSS de tous les paragraphes, on effectue une boucle <b>for</b>.</li>
+            </ul>
+        </article>
+        <div class="pages"><a href="script12.html">Précédent</a> - <a href="script14.html">Suivant</a></div>
+    </body>
+</html>

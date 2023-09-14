@@ -1,0 +1,40 @@
+<!Doctype>
+<html lang="fr">
+    <head>
+        <title>Langage JAVASCRIPT - script 12</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <script type="text/javascript">
+			function bienvenue(){
+			// Message de bienvenue dans le document web !
+				let prenom = prompt("Quel est votre prénom ?");
+				let message = prenom + " vous êtes le bienvenu.e";
+				document.getElementById("bienvenue").innerHTML = message;
+				document.getElementById("reponse").style.display = 'block';
+			};
+        </script>
+    </head>
+    <body>
+        <article>
+        <h1>Modifier le contenu d'un document HTML avec JAVASCRIPT</h1>
+        <p>Le script de cette page doit demander le prénom du lecteur et afficher dans le document web le prénom du lecteur sous forme d'un message de bienvenue.</p>
+            <h4>Votre travail:</h4>
+            <ol>
+                <li>Vous devez ouvrir ce fichier script12.html et compléter le script JAVASCRIPT.</li>
+                <li>Une fonction <b>bienvenue()</b> sans paramètre sera créée.</li>
+                <li>Le prénom sera à saisir par le lecteur et affecté à une variable <b>prenom</b>.</li>
+                <li>Le message de bienvenue est constitué avec le prénom du lecteur.</li>
+                <li>Le message sera affiché dans le document WEB dans l'élément HTML "p" avec l'identifiant "bienvenue".</li>
+            </ol>
+        <p>Si votre script est correct, en actualisant cette page, vous devez voir votre message de bienvenue écrit ci-dessous.</p>
+            <button onclick="bienvenue();">Saisir un prénom</button>
+			<!-- # La partie du document HTML qui sera modifiée : on utilise l'id "bienvenue" -->
+			<div id="reponse">
+			<p id="bienvenue" class="affiche"></p>
+			</div>
+            <h4>Pour approfondir</h4>
+            <p>Ajouter l'âge du lecteur.</p>
+        </article>
+        <div class="pages"><a href="script11.html">Précédent</a> - <a href="script13.html">Suivant</a></div>
+    </body>
+</html>
